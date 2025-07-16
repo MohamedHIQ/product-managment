@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* الالوان */
+:root {
+    --blue-primary: #4fc3f7; /* اللون الأساسي الأزرق الفاتح */
+    --blue-light-bg: #e1f5fe; /* خلفية العناصر */
+    --blue-dark-text: #01579b; /* النصوص والعناوين */
+    --blue-border: #81d4fa; /* حدود أو مؤثرات */
+    --total-color: #039ee6; /* لون إجمالي */
+    --red-color: #ff0000; /* لون الحذف */
+    --green-color: #2bcc2b; /* لون التحديث*/
+}
+/* جسم الصفحة */
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: "roboto", sans-serif;
+}
+/* الهيدر */
+.header {
+    height: 10%;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+.header h2 {
+    color: var(--blue-primary);
+    font-size: 2.5rem;
+}
+.header p {
+    color: var(--blue-dark-text);
+    font-size: 1.2rem;
+}
+/* الادخال */
+.input1 {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--blue-border);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+.input1:focus-within {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+/* السطر الاول */
+#title {
+    width: 90%;
+}
+/* نصف الاول من السطر الاثاني */
+.price {
+    font-family: Arial, sans-serif;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.input1 .input2 {
+    width: 92%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.input1 .input2 .price input {
+    width: 43%;
+    margin: 5px 0;
+}
+/* نصف الثاني من السطر الاثاني  */
+.numcat {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.numcat input {
+    width: 95%;
+    margin: 5px 0 5px 0;
+}
+input {
+    width: 20%;
+    height: 40px;
+    margin: 5px auto;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+#total {
+    background-color: var(--total-color);
+    color: white;
+    padding: 4px 2px;
+    border-radius: 4px;
+    width: 45%;
+    text-align: center;
+}
+#total::before {
+    content: "Total: ";
+}
+#total::after {
+    content: " $ ";
+    color: #ffe96e;
+}
+
+input:focus {
+    border: 1px solid var(--blue-border);
+}
+
+.end {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-around;
+}
+.end button {
+    width: 45%;
+    height: 40px;
+    background-color: var(--total-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    margin: 0 0 5px 0;
+}
+.end button:hover {
+    background-color: var(--blue-dark-text);
+    transition: background-color 0.3s ease;
+}
+.end #updatebtn {
+    width: 45%;
+    height: 40px;
+    background-color: var(--green-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+}
+.end #updatebtn:hover {
+    background-color: #36cf36;
+    transition: background-color 0.3s ease;
+}
+/* الخروج */
+.output {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* البحث */
+.output #search {
+    width: 88%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+/* ازرار الخروج */
+.output .outputbtn {
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    flex-direction: row;
+}
+.output .outputbtn button {
+    width: 45%;
+    height: 40px;
+    background-color: var(--total-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 0 5px 0;
+}
+.output .outputbtn button:hover {
+    background-color: var(--blue-dark-text);
+    transition: background-color 0.3s ease;
+}
+#deleteall {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#deleteallbtn {
+    width: 45%;
+    height: 40px;
+    background-color: var(--red-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+#deleteallbtn:hover {
+    background-color: #ff2e2e;
+    transition: background-color 0.3s ease;
+}
+/* الجدول */
+table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* دواخل الجدول */
+th,
+td {
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+thead {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tbody tr:hover {
+    background-color: #f0f8ff;
+    transition: background-color 0.3s ease;
+}
+table button {
+    width: 100%;
+    height: 40px;
+    background-color: var(--total-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+table #update:hover {
+    background-color: #2bcc2b;
+    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+    color: black;
+}
+table #delete:hover {
+    background-color: #ff0000;
+    transition: background-color 0.3s ease;
+}

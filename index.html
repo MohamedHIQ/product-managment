@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/home.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="system">
+            <div class="header">
+                <h2>product managment</h2>
+                <p>Made py MHI</p>
+            </div>
+            <div class="input1">
+                <input
+                    onkeyup="getTotal()"
+                    type="text"
+                    id="title"
+                    placeholder="Title"
+                />
+                <div class="input2">
+                    <div class="numcat">
+                        <input
+                            oninput="onlyNumbers(this)"
+                            inputmode="numeric"
+                            onkeyup="getTotal()"
+                            type="text"
+                            id="count"
+                            placeholder="Count"
+                        />
+                        <input
+                            onkeyup="getTotal()"
+                            type="text"
+                            id="category"
+                            placeholder="Category"
+                        />
+                    </div>
+                    <div style="width: 10%"></div>
+                    <div class="price">
+                        <input
+                            oninput="onlyNumbers(this)"
+                            inputmode="numeric"
+                            onkeyup="getTotal()"
+                            type="text"
+                            id="price"
+                            placeholder="Price"
+                        />
+                        <input
+                            oninput="onlyNumbers(this)"
+                            inputmode="numeric"
+                            onkeyup="getTotal()"
+                            type="text"
+                            id="taxes"
+                            placeholder="Taxes"
+                        />
+                        <input
+                            oninput="onlyNumbers(this)"
+                            inputmode="numeric"
+                            onkeyup="getTotal()"
+                            type="text"
+                            id="ads"
+                            placeholder="Ads"
+                        />
+                        <input
+                            oninput="onlyNumbers(this)"
+                            inputmode="numeric"
+                            onkeyup="getTotal()"
+                            type="text"
+                            id="discont"
+                            placeholder="Discont"
+                        />
+                    </div>
+                </div>
+                <div class="end">
+                    <small id="total">0</small>
+                    <button id="submit">Create</button>
+                </div>
+            </div>
+            <div class="output">
+                <input
+                    oninput="searchNow(this)"
+                    type="text"
+                    id="search"
+                    placeholder="Search"
+                />
+                <div class="outputbtn">
+                    <button onclick="getModSearch(this)" id="Search-by-title">
+                        Search by title
+                    </button>
+                    <button
+                        onclick="getModSearch(this)"
+                        id="Search-by-Chatrgory"
+                    >
+                        Search by chatrgory
+                    </button>
+                </div>
+                <div id="deleteall"></div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>title</th>
+                            <th>price</th>
+                            <th>taxes</th>
+                            <th>ads</th>
+                            <th>discont</th>
+                            <th>total</th>
+                            <th>category</th>
+                            <th>update</th>
+                            <th>delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+        <script src="js/home.js"></script>
+    </body>
+</html>
